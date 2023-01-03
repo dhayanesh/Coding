@@ -15,6 +15,8 @@
  */
 class Solution {
     public int kthSmallest(TreeNode root, int k) {
+        if (root == null) 
+            return;
         List<Integer> result = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList<>();
 
