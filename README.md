@@ -1,1 +1,1 @@
-![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=dhayanesh&theme=blue-green)
+Repo of solutions for problems I solved in Leetcode and other coding practice sites.
