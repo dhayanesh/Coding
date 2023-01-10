@@ -1,3 +1,4 @@
+//similar to fibonacci with memoization
 class Solution {
     HashMap<Integer, Integer> dp = new HashMap<>();
     public int climbStairs(int n) {
