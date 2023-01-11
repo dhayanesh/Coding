@@ -11,19 +11,14 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 class Result {
-
+    //solution code
     public static int alternatingCharacters(String s) {
         char[] ch = s.toCharArray();
-        ArrayList<Character> chList = new ArrayList<Character>();
-        for(char i : ch)
-            chList.add(i);
-        
         int count = 0;
-        for(int i = 1; i < chList.size(); i++) {
-            char prev = chList.get(i - 1);
-            char curr = chList.get(i);
+        for(int i = 1; i < ch.length; i++) {
+            char prev = ch[i - 1];
+            char curr = ch[i];
             if(prev == curr){
-                chList.set(i - 1, 'c');
                 count++;
             }
         }
