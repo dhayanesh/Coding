@@ -8,7 +8,7 @@ class Solution(object):
                 return mid
             elif(mid*mid < x):
                 left = mid + 1
-                res = mid
+                res = mid # lower bound for not perfect square numbers
             else:
                 right = mid - 1
         return res
