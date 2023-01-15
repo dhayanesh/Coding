@@ -7,7 +7,7 @@ class Solution {
     public int pathFinder(int m, int n, HashMap <String, Integer> hm) {
         if(m == 0 || n == 0)
             return 0;
-        if(m == 1 || n == 1)
+        if(m == 1 && n == 1)
             return 1;
         String key = "" + m + "," + n;
         if(hm.containsKey(key))
