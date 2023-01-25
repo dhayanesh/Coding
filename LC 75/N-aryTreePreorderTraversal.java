@@ -29,6 +29,7 @@ class Solution {
         while(!stack.isEmpty()) {
             Node temp = stack.pop();
             list.add(temp.val);
+            //can also collection.reverse()
             for(int i = temp.children.size() - 1; i >= 0; i--)
                 stack.push(temp.children.get(i));
         }
