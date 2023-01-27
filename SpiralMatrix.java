@@ -17,24 +17,26 @@ class Solution {
                 list.add(matrix[rowSt][i]);
             }
             rowSt++;
+            
             //Down
             for (int i = rowSt; i <= rowEnd; i ++) {
                 list.add(matrix[i][colEnd]);
             }
             colEnd--;
+
+            if (!(rowSt <= rowEnd && colSt <= colEnd)) 
+                break;
+            
             //Left
-            if (rowSt <= rowEnd) {
-                for (int i = colEnd; i >= colSt; i --) {
-                    list.add(matrix[rowEnd][i]);
-                }
+            for (int i = colEnd; i >= colSt; i --) {
+                list.add(matrix[rowEnd][i]);
             }
-            rowEnd--;            
+            rowEnd--;   
+            
             //Up
-            if (colSt <= colEnd) {
-                for (int i = rowEnd; i >= rowSt; i --) {
-                    list.add(matrix[i][colSt]);
-                }
-            }
+            for (int i = rowEnd; i >= rowSt; i --) {
+                list.add(matrix[i][colSt]);
+            }               
             colSt++;
         }
 
