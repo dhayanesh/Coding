@@ -1,6 +1,6 @@
 class Solution {
     public boolean isValidSudoku(char[][] board) {
-        HashSet set = new HashSet();
+        HashSet<String> set = new HashSet<>();
         for (int i=0; i<9; ++i) {
             for (int j=0; j<9; ++j) {
                 char number = board[i][j];
