@@ -10,6 +10,7 @@ class Solution {
             if (j - i + 1 - max > k) {
                 arr[s.charAt(i) - 'A']--;
                 i++;
+                //No need to decrement max cause arr[s.charAt(j) - 'A'] only affects the final result, not max. 
             }
             ans = Math.max(ans, j - i + 1);
         }
