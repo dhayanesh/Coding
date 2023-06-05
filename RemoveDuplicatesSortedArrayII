@@ -1,0 +1,15 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int j = 0, len = nums.length;
+        HashMap<Integer, Integer> hm = new HashMap<>();
+        
+        for(int i = 0; i < len; i++) {
+            int count = hm.getOrDefault(nums[i], 0);
+            if(count < 2){
+                nums[j++] = nums[i];
+                hm.put(nums[i], count + 1);
+            }
+        }
+        return j;
+    }
+}
